@@ -14,13 +14,15 @@ Here we compare two oversampling algorithms to determine the best performance.
 
 1.	The naïve random oversampling algorithm involves randomly selecting samples by duplicating from the minority class.  
 
-As we look at the accurate score, we notice a score of 63% of accuracy. However, the precision for high risk is only 0.01%, and the low risk is 1.0%. But when we look at recall, we see a 59% high risk and 69% low risk. These numbers are based on my first model used for the outcome. 
+As we look at the accurate score, we notice a score of 63% of accuracy. However, the precision for high risk is only 0.01%, and the low risk is 1.0%, with a total avg of 0.99%. When we look at recall, we see a 59% high risk and 69% low risk, with a total avg of 69%. These numbers are based on my first model used for the outcome. 
 
 <img width="680" alt="Screen Shot 2022-09-29 at 9 22 14 PM" src="https://user-images.githubusercontent.com/106892740/193189839-bf48ee96-f6af-41e0-89b0-b3e646b08ab0.png">
 
+**SMOTE Oversampling**
+
 2.	The SMOTE algorithm is when the synthetic is generated for the minority class. It helps to overcome overfitting problems posed by random oversampling.
 
-As we look at the accurate score, we notice a score of 62% of accuracy. However, the precision for high risk is only 0.01%, and the low risk is 1.0%. But when we look at recall, we see a 57% high risk and 46% low risk. These numbers are based on my first model used for the outcome. 
+As we look at the accurate score, we notice a score of 62% of accuracy. However, the precision for high risk is only 0.01%, and the low risk is 1.0% with a total avg of 0.99%. When we look at recall, we see a 57% high risk and 46% low risk, with a total avg of 46%. These numbers are based on my second model used for the outcome. 
 
 <img width="433" alt="Screen Shot 2022-09-29 at 9 23 21 PM" src="https://user-images.githubusercontent.com/106892740/193189960-12dc4ec0-9637-45ae-a197-8436358545b7.png">
 
@@ -32,7 +34,7 @@ Here we test the undersampling algorithms to determine the best performance.
 
 1.	Undersampling balances uneven datasets by keeping the data in the minority class and decreasing the size. 
 
-As we look at the accurate score, we notice a score of 62% of accuracy. However, the precision for high risk is only 0.01%, and the low risk is 1.0%. But when we look at recall, we see a 61% high risk and 45% low risk. These numbers are based on my first model used for the outcome. 
+As we look at the accurate score, we notice a score of 62% of accuracy. However, the precision for high risk is only 0.01%, and the low risk is 1.0% with a total avg of 0.99%. When we look at recall, we see a 61% high risk and 45% low risk, with a total avg of 45%. These numbers are based on my third model used for the outcome. 
 
 <img width="483" alt="Screen Shot 2022-09-29 at 9 55 48 PM" src="https://user-images.githubusercontent.com/106892740/193193304-dd819cfd-115b-4ea9-82c3-2de77262e1b7.png">
 
@@ -44,42 +46,40 @@ Here we test the undersampling algorithms to determine the best performance.
 
 1.	Combination Sampling shows the effect of applying an undersampling algorithm after a smote 
 
-As we look at the accurate score, we notice a score of 62% of accuracy. However, the precision for high risk is only 0.01%, and the low risk is 1.0%. But when we look at recall, we see a 72% high risk and 57% low risk. These numbers are based on my first model used for the outcome. 
+As we look at the accurate score, we notice a score of 62% of accuracy. However, the precision for high risk is only 0.01%, and the low risk is 1.0% with a total avg of 0.99%. When we look at recall, we see a 72% high risk and 57% low risk, with a total avg of 57%. These numbers are based on my fourth model used for the outcome. 
 
 <img width="629" alt="Screen Shot 2022-09-29 at 7 08 51 PM" src="https://user-images.githubusercontent.com/106892740/193178757-f75e9924-63e2-4d5e-a45a-be0ec3310c58.png">
 
 <img width="804" alt="Screen Shot 2022-09-29 at 9 26 55 PM" src="https://user-images.githubusercontent.com/106892740/193190379-ed0b36ff-2761-4794-beba-0210be40a12e.png">
 
-**Ensemble Learners**  
+### Ensemble Learners  
 
 An ensemble model is a composite model which combines a series of low-performing or weak classifiers intending to create a strong classifier. 
 
 Here we compare two ensemble algorithms to determine the best performance. 
 
-1.	Balance Random Forest Classifier
+**Balance Random Forest Classifier**
 
 The balance random forest classifier bootstrapped set the same size, equal to the size of the minority class, are constructed: one minority and the other majority.  
 
-As we look at the accurate score we noticed a score of 78% of accuracy, however the precision for high risk is only 0.04% and the low risk is 1.0%. But when we look at recall, we see a 67% high risk and 91% low risk. This numbers are based on my first model used for outcome. 
+As we look at the accurate score we noticed a score of 78% of accuracy, however the precision for high risk is only 0.04% and the low risk is 1.0% with a total avg of 0.99%. But when we look at recall, we see a 67% high risk and 91% low risk, with a total avg of 91%. This numbers are based on my fifth model used for outcome. 
 
 <img width="544" alt="Screen Shot 2022-09-29 at 9 29 11 PM" src="https://user-images.githubusercontent.com/106892740/193190557-69a734c9-4988-4964-a72a-f9ef05522d27.png">
 
-
 <img width="737" alt="Screen Shot 2022-09-29 at 9 29 26 PM" src="https://user-images.githubusercontent.com/106892740/193190568-24d8ba0e-11ea-422c-99a1-41cb79a8c2a9.png">
 
-2.	Easy Ensemble AdaBoost Classifier
+**Easy Ensemble AdaBoost Classifier**
 
 Easy Ensemble AdaBoost Classifier combines multiple week classifiers to increase the accuracy of classifiers.
 
-As we look at the accurate score we noticed a score of 92% of accuracy, however the precision for high risk is only 0.07% and the low risk is 1.0%. But when we look at recall, we see a 91% high risk and 94% low risk. This numbers are based on my first model used for outcome. 
+As we look at the accurate score we noticed a score of 92% of accuracy, however the precision for high risk is only 0.07% and the low risk is 1.0% with a total avg of 0.99%. But when we look at recall, we see a 91% high risk and 94% low risk, with a total avg of 94%. This numbers are based on my sixth model used for outcome. 
 
 <img width="509" alt="Screen Shot 2022-09-29 at 9 30 13 PM" src="https://user-images.githubusercontent.com/106892740/193190690-9c911eaa-9cff-4b46-94b6-d5fae3f32a7b.png">
-
 
 <img width="721" alt="Screen Shot 2022-09-29 at 9 30 45 PM" src="https://user-images.githubusercontent.com/106892740/193190697-c9d2c261-0862-4b46-98c8-53b05271fb91.png">
 
 ## Summary: 
 
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. If you do not recommend any of the models, justify your reasoning.
+After conducting the test based on the dataset given and the first five (Naive Random oversampling, SMOTE Undersampling, Oversampling, and Combination Sampling), Machine Learning modules showed a 99% precision rate. However, the recall was low. When I conducted the same test using both Ensemble Learners modules (Balance Random Forest Classifier and Easy Ensemble Adaboost Classifier), the results were different when looking at the recall column. I noticed the precision for high-risk and low-risk had an avg of 99%, and the recall was avg of 90%. The ensemble learning showed better results and numbers than the under and oversampling. The ensemble learning module is better than the sampling module based on the dataset. 
 
 
